@@ -97,7 +97,7 @@ def run():
                     uptime['hour'] = int((all_sec % DAY) / HOUR)
                     uptime['minute'] = int((all_sec % HOUR) / MINUTE)
                     uptime['second'] = int(all_sec % MINUTE)
-                    uptime['allminte']= inet(all_sec / MINUTE)
+                    uptime['allminte']= int(all_sec / MINUTE)
                     uptime['Free rate'] = float(con[1]) / float(con[0])
                     #获取网站监控信息
                     wz=http_monitor()
