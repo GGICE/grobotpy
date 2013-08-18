@@ -9,5 +9,5 @@
 	 PASSWD = '用户微博密码'
  3.运行即可
 
-
+ DEMO <a href="http://weibo.com/u/1651444704" target="_blank">@GGICE的小喵</a>
  Power by <a href="http:ice.gs" target="_blank">GGICE</a>
