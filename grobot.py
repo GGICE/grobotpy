@@ -20,10 +20,10 @@ from weibo import APIClient
   
 
 #打招呼函数
-def hello():
-        count = len(open('hello.txt','rU').readlines())
-        hellonum=random.randrange(1,count, 1)
-        return linecache.getline('hello.txt',hellonum)
+#def hello():
+#        count = len(open('hello.txt','rU').readlines())
+#        hellonum=random.randrange(1,count, 1)
+#        return linecache.getline('hello.txt',hellonum)
 #网站监控函数
 def http_monitor():
     try:
@@ -101,10 +101,8 @@ def run():
                     uptime['Free rate'] = float(con[1]) / float(con[0])
                     #获取网站监控信息
                     wz=http_monitor()
-                    #获取问候信息
-                    hellos=hello()
                     #整理微博信息
-                    text_temp = '#喵喵雨露#"%s" | 主人:我已经运行%d分钟 | 现在CPU温度:%.2f°C | 网站监控[%s]' %(hellos,uptime['allminute'],float_temp,wz)
+                    text_temp = '#喵喵# 主人:我已经运行%d分钟 | 现在CPU温度:%.2f°C | 网站监控[%s]' %(uptime['allminute'],float_temp,wz)
                     print text_temp  
                     client.statuses.update.post(status=text_temp)  
                     print "Send succesfully!"
