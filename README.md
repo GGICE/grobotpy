@@ -7,19 +7,17 @@
  
  使用方法：
 
- 1.首先安装好Python的weibo SDk
+ 1.首先安装好Python的<a href="http://michaelliao.github.io/sinaweibopy/" target="_blank">weibo SDk</a>。
 
- 2.修改源码中的以下信息为自己的
+ 2.创建文件/etc/grobt/db,并分四行写入以下信息。
 
-	 APP_KEY = '1392181xxx'
+	 APP_KEY
 
-	 APP_SECRET = '612b0c6432a5f9cc7dxxxxxxx'
+	 APP_SECRET
 
-	 CALLBACK_URL = 'https://api.weibo.com/oauth2/default.html'
-
-	 USERID = '用户微博账号'
+	 用户微博账号
 	 
-	 PASSWD = '用户微博密码'
+	 用户微博密码
 
  3.运行即可
 

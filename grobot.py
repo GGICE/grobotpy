@@ -34,19 +34,22 @@ def http_monitor():
 #主要函数
 def run():
     #模拟登陆
-    APP_KEY = '2702428363'
-    APP_SECRET = '82d9b7c386000b0de0711a20f146fa44'
+
+    APP_KEY = linecache.getline('/etc/grobot/db',1)
+    APP_SECRET = linecache.getline('/etc/grobot/db',2)
+    USERID = linecache.getline('/etc/grobot/db',3)
+    PASSWD = linecache.getline('/etc/grobot/db',4)
+    APP_KEY = APP_KEY.strip('\n')
+    APP_SECRET = APP_SECRET.strip('\n')
+    USERID = USERID.strip('\n')
+    PASSWD = PASSWD.strip('\n')
     CALLBACK_URL = 'https://api.weibo.com/oauth2/default.html'
     client = APIClient(app_key=APP_KEY, app_secret=APP_SECRET, redirect_uri=CALLBACK_URL)
     referer_url = client.get_authorize_url()
-    USERID = raw_input("请输入您的用户名:")
-    PASSWD = raw_input("请输入您的密码:")
     print "referer url is : %s" % referer_url
- 	
     cookies = urllib2.HTTPCookieProcessor()
     opener = urllib2.build_opener(cookies)
     urllib2.install_opener(opener)
-    
     postdata = {"client_id": APP_KEY,
              "redirect_uri": CALLBACK_URL,
              "userId": USERID,
