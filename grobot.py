@@ -32,22 +32,21 @@ def http_monitor():
     except:
         return '啊打不开啦'
 #主要函数
-def run():  
+def run():
     #模拟登陆
-    APP_KEY = '1392181xxx'
-    APP_SECRET = '612b0c6432a5f9cc7dxxxxxxx'
+    APP_KEY = '2702428363'
+    APP_SECRET = '82d9b7c386000b0de0711a20f146fa44'
     CALLBACK_URL = 'https://api.weibo.com/oauth2/default.html'
-    USERID = '用户微博账号'
-    PASSWD = '用户微博密码'
- 
     client = APIClient(app_key=APP_KEY, app_secret=APP_SECRET, redirect_uri=CALLBACK_URL)
     referer_url = client.get_authorize_url()
+    USERID = raw_input("请输入您的用户名:")
+    PASSWD = raw_input("请输入您的密码:")
     print "referer url is : %s" % referer_url
- 
+ 	
     cookies = urllib2.HTTPCookieProcessor()
     opener = urllib2.build_opener(cookies)
     urllib2.install_opener(opener)
- 
+    
     postdata = {"client_id": APP_KEY,
              "redirect_uri": CALLBACK_URL,
              "userId": USERID,
