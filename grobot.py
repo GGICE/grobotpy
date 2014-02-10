@@ -27,7 +27,7 @@ from weibo import APIClient
 #网站监控函数
 def http_monitor():
     try:
-        data = urllib2.urlopen('http://ice.gs/monitor/',timeout=10)
+        data = urllib2.urlopen('http://ice.gs/blog/',timeout=30)
         return '妥妥的！'
     except:
         return '妈蛋服务器进水啦！主人@GGICE 快去瞅瞅'
