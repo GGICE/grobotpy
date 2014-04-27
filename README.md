@@ -1,3 +1,5 @@
+此版本更新缓慢，想发现最新更新功能请看这里https://github.com/ggice/grobot-test
+ 
  功能：
 
  1.每小时报告树莓派CPU温度
