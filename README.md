@@ -11,7 +11,7 @@
 
  1.首先安装好Python的<a href="http://michaelliao.github.io/sinaweibopy/" target="_blank">weibo SDk</a>。
 
- 2.创建文件/etc/grobt/db,并分四行写入以下信息。
+ 2.创建文件/etc/grobot/db,并分四行写入以下信息。
 
 	 APP_KEY
 
