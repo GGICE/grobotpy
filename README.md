@@ -1,4 +1,4 @@
-此版本更新缓慢，想发现最新更新功能请看这里https://github.com/ggice/grobot-test
+# 很久之前玩的，不会再更新了！
  
  功能：
 
